@@ -1,0 +1,6 @@
+{
+  "framework": "python",
+  "entrypoint": "roles.py",
+  "installCommand": "pip install -r requirements.txt"
+}
+
