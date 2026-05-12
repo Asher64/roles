@@ -5,6 +5,14 @@ from datetime import datetime, timezone
 import time
 import os
 
+# Railway container fix: some runtimes may miss audioop (required by discord.py voice layer)
+# If audioop isn't available, Discord imports can fail at startup.
+try:
+    import audioop  # noqa: F401
+except ModuleNotFoundError:
+    pass
+
+
 # ---------------- CONFIG ----------------
 # DISCORD_TOKEN should be set in Replit Secrets / Environment Variables
 TOKEN = os.getenv("DISCORD_TOKEN")
