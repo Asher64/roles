@@ -1,6 +1,10 @@
 {
-  "framework": "python",
-  "entrypoint": "roles.py",
-  "installCommand": "pip install -r requirements.txt"
+  "deploy": {
+    "startCommand": "python roles.py"
+  },
+  "build": {
+    "command": "pip install -r requirements.txt"
+  }
 }
+
 
